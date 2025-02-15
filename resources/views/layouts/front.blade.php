@@ -224,6 +224,7 @@
     <div class="menu-section" id="myHeader">
         <div class="container">
             <div class="row">
+                <!--category view-->
                 <div class="col-lg-10 col-md-10">
                     <div class="mobile_logo">
                         <a href="#"> <img
