@@ -123,7 +123,11 @@
         </li>
         <!-- Distric -->
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="#" class="nav-link {{Route::currentRouteName() == 'social.setting' ? 'active' : ''}}
+          {{Route::currentRouteName() == 'seo.setting' ? 'active' : ''}}
+          {{Route::currentRouteName() == 'namaz.setting' ? 'active' : ''}}
+          {{Route::currentRouteName() == 'livetv.setting' ? 'active' : ''}}
+          {{Route::currentRouteName() == 'notice.setting' ? 'active' : ''}}">
             <i class="nav-icon fas fa-copy"></i>
             <p>
               Setting
@@ -132,31 +136,31 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{Route('social.setting')}}" class="nav-link ">
+              <a href="{{Route('social.setting')}}" class="nav-link {{Route::currentRouteName() == 'social.setting' ? 'active' : ''}}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Social Setting</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{Route('seo.setting')}}" class="nav-link ">
+              <a href="{{Route('seo.setting')}}" class="nav-link {{Route::currentRouteName() == 'seo.setting' ? 'active' : ''}}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>SEO Setting</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{Route('namaz.setting')}}" class="nav-link ">
+              <a href="{{Route('namaz.setting')}}" class="nav-link {{Route::currentRouteName() == 'namaz.setting' ? 'active' : ''}}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Prayer Setting</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{Route('livetv.setting')}}" class="nav-link ">
+              <a href="{{Route('livetv.setting')}}" class="nav-link {{Route::currentRouteName() == 'livetv.setting' ? 'active' : ''}}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>LIVE TV Setting</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{Route('notice.setting')}}" class="nav-link ">
+              <a href="{{Route('notice.setting')}}" class="nav-link {{Route::currentRouteName() == 'notice.setting' ? 'active' : ''}}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Notice Setting</p>
               </a>
