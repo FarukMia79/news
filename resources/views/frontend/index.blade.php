@@ -1,5 +1,9 @@
 @extends('layouts.front')
 @section('content')
+@php
+use Illuminate\Support\Str;
+@endphp
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <div class="main-section" style="overflow: hidden;">
 
@@ -127,8 +131,7 @@
                                             </h5>
 
 
-                                            <div class="content_details">
-                                                ধীরে ধীরে বদলে যাচ্ছে সৌদি আরবের আবহাওয়া। কয়েক দিন... <a href="{{Route('view-post', $First_section_2->id)}}"></a> <a
+                                            <div class="content_details">{{Str::limit($First_section_2->description_en, 50)}}... <a href="{{Route('view-post', $First_section_2->id)}}"></a> <a
                                                     href="133.html"> বিস্তারিত</a>
                                             </div>
 
@@ -157,9 +160,8 @@
                                             </h5>
 
 
-                                            <div class="content_details">
-                                                ধীরে ধীরে বদলে যাচ্ছে সৌদি আরবের আবহাওয়া। কয়েক দিন... <a href="#"></a> <a
-                                                    href="133.html"> বিস্তারিত</a>
+                                            <div class="content_details">{{Str::limit($First_section_2->description_bn, 100)}}... <a href=""></a> <a
+                                                    href="{{Route('view-post', $First_section_2->id)}}"> বিস্তারিত</a>
                                             </div>
 
                                             <h6 class="cat-meta">
@@ -1019,10 +1021,7 @@
                                                 <h4 class="secThree_title">
                                                     <a href="{{Route('view-post', $FastcatPostBig->id)}}">{{$FastcatPostBig->title_en}}</a>
                                                 </h4>
-                                                <div class="content_details">
-                                                    এটা একটা ডেমো নিউজ। এটা একটা ডেমো নিউজ। এটা একটা ডেমো নিউজ। এটা একটা ডেমো
-                                                    নিউজ। এটা একটা ডেমো নিউজ। এটা একটা ডেমো নিউজ। এটা একটা ডেমো নিউজ। এটা একটা
-                                                    ডেমো নিউজ। এটা একটা ডেমো নিউজ। এটা একটা ডেমো নিউজ।... <a href="#"></a> <a
+                                                <div class="content_details">{{Str::limit($FastcatPostBig->description_en, 100)}}... <a href="#"></a> <a
                                                         href="74.html"> বিস্তারিত</a>
                                                 </div>
 
@@ -1040,10 +1039,7 @@
                                                 <h4 class="secThree_title">
                                                     <a href="{{Route('view-post', $FastcatPostBig->id)}}">{{$FastcatPostBig->title_bn}}</a>
                                                 </h4>
-                                                <div class="content_details">
-                                                    এটা একটা ডেমো নিউজ। এটা একটা ডেমো নিউজ। এটা একটা ডেমো নিউজ। এটা একটা ডেমো
-                                                    নিউজ। এটা একটা ডেমো নিউজ। এটা একটা ডেমো নিউজ। এটা একটা ডেমো নিউজ। এটা একটা
-                                                    ডেমো নিউজ। এটা একটা ডেমো নিউজ। এটা একটা ডেমো নিউজ।... <a href="#"></a> <a
+                                                <div class="content_details">{{Str::limit($FastcatPostBig->description_bn, 100)}}... <a href="#"></a> <a
                                                         href="#"> বিস্তারিত</a>
                                                 </div>
 
